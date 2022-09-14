@@ -3,3 +3,82 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
 /* font-family: 'Fraunces', serif; */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #F3EAE3;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    margin: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* .container-imagem {
+    
+} */
+
+.produto-imagem {
+    max-width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.container-texto {
+    margin: 20px;
+}
+
+.produto-titulo {
+    font-family: 'Fraunces', serif;
+    line-height: 30px;
+    padding: 15px 0px 15px 0px;
+}
+
+p {
+    font-size: 14px;
+    color: #8C8D92;
+}
+
+.produto-tipo {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.produto-descricao {
+    line-height: 23px;
+}
+
+.valor {
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+}
+.produto-valor {
+    font-family: 'Fraunces', serif;
+    font-size: 32px;
+    color: #3D8168;
+}   
+.produto-valor-antigo {
+    text-decoration: line-through;
+    margin-left: 25px;
+}
+
+.botao {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    background-color: #3D8168;
+    color: white;
+    border: none;
+    width: 100%;
+    margin: 15px 0 20px 0;
+    padding: 15px;
+    border-radius: 10px;
+}
