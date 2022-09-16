@@ -9,15 +9,24 @@
     padding: 0;
 }
 
+body, html{
+    height: 100%;
+} 
+
 body {
     background-color: #F3EAE3;
     font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .container {
-    margin: 20px;
+    margin: 80px;
     background-color: white;
     border-radius: 10px;
+    box-shadow: 0px 8px 5px rgba(0, 0, 0, 0.4);
 }
 
 /* .container-imagem {
@@ -58,11 +67,13 @@ p {
     align-items: center;
     padding-top: 15px;
 }
+
 .produto-valor {
     font-family: 'Fraunces', serif;
     font-size: 32px;
     color: #3D8168;
-}   
+}
+
 .produto-valor-antigo {
     text-decoration: line-through;
     margin-left: 25px;
@@ -71,6 +82,8 @@ p {
 .botao {
     display: flex;
     justify-content: center;
+    padding-top: 15px;
+    padding-bottom: 20px;
 }
 
 .btn {
@@ -78,7 +91,35 @@ p {
     color: white;
     border: none;
     width: 100%;
-    margin: 15px 0 20px 0;
     padding: 15px;
-    border-radius: 10px;
+    border-radius: 8px;
+}
+
+@media (min-width: 600px) {
+    
+    .container-texto {
+        width: 50%;
+    }
+
+    .container {
+        display: flex;
+        height: 400px;
+        width: 500px;
+    }
+
+    .produto-imagem {
+        visibility: hidden;
+    }
+
+    .container-imagem {
+
+        background: url(images/image-product-desktop.jpg);
+        background-size: cover;
+        background-position: center;
+        box-sizing: border-box;
+        border-radius: 10px 0px 0 10px;
+
+
+
+    }
 }
