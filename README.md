@@ -1,94 +1,98 @@
 
 
-# Frontend Mentor - Componente do cartão de visualização do produto
+# Frontend Mentor - Solução de componente de cartão de visualização do produto
 
-![Visualização do design para o desafio de codificação do componente do cartão de visualização do produto](./design/desktop-preview.jpg)
+Esta é uma solução para o [desafio do componente do cartão de visualização do produto no Frontend Mentor](https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa). Os desafios do Frontend Mentor ajudam você a melhorar suas habilidades de codificação criando projetos realistas.
 
-## Bem-vindo! 👋
+## Índice
 
-Obrigado por conferir este desafio de codificação de front-end.
+- [Visão geral](#visão geral)
+  - [O desafio](#the-challenge)
+  - [Captura de tela](#captura-de-tela)
+  - [Links](#links)
+- [Meu processo](#meu-processo)
+  - [Construído com](#construído-com)
+  - [O que aprendi](#o-que-aprendi)
+  - [Desenvolvimento contínuo](#desenvolvimento-contínuo)
+  - [Recursos úteis](#useful-resources)
+- [Autor](#https://hudney-fsbrito.github.io/Hudney-Brito-Portfolio-/)
+- [Agradecimentos](#agradecimentos)
 
-Os desafios do [Frontend Mentor](https://www.frontendmentor.io) ajudam você a melhorar suas habilidades de codificação criando projetos realistas.
+## Visão geral
 
-**Para fazer esse desafio, você precisa ter um conhecimento básico de HTML e CSS.**
+Olá, Bem-vindo! 👋
 
-## O desafio
+Este foi um desafio para colocar em prática minhas habilidades que adquirir até aqui. Tentei fazer o mais próximo possível de acordo com o modelo proposto. O projeto é um cartão de visualização de produto que pode ser visto tanto em desktop quanto em mobile que a tela se adequa ao tamanho.
 
-Seu desafio é construir este componente de cartão de pré-visualização do produto e fazê-lo parecer o mais próximo possível do design.
+![](./design/Template.jpg)
 
-Você pode usar qualquer ferramenta que desejar para ajudá-lo a completar o desafio. Então, se você tem algo que gostaria de praticar, sinta-se à vontade para tentar.
+### O desafio
 
-Seus usuários devem ser capazes de:
+Os usuários devem ser capazes de:
 
 - Visualize o layout ideal dependendo do tamanho da tela do dispositivo
 - Veja os estados de foco e foco para elementos interativos
 
-Quer algum apoio no desafio? [Junte-se à nossa comunidade Slack](https://www.frontendmentor.io/slack) e faça perguntas no canal **#help**.
+### Captura de tela
 
-## Onde encontrar tudo
+![](./design/desktop.jpg)
+![](./design/mobile.jpg)
 
-Sua tarefa é construir o projeto para os designs dentro da pasta `/design`. Você encontrará uma versão móvel e uma versão desktop do design.
+### Links
 
-Os desenhos estão em formato JPG estático. Usar JPGs significa que você precisará usar seu melhor julgamento para estilos como `font-size`, `padding` e `margin`.
+- URL do site ao vivo: [Adicione o URL do site ao vivo aqui](https://hudney-fsbrito.github.io/Componente-do-Cart-o-de-Visualiza--o-do-Produto/)
 
-Se você quiser que os arquivos de design (fornecemos versões Sketch e Figma) para inspecionar o design com mais detalhes, você pode [inscrever-se como membro PRO](https://www.frontendmentor.io/pro).
+## Meu processo
 
-Você encontrará todos os recursos necessários na pasta `/images`. Os ativos já estão otimizados.
+### Construído com
 
-Há também um arquivo `style-guide.md` contendo as informações necessárias, como paleta de cores e fontes.
+- Marcação HTML5 semântica
+- Propriedades personalizadas de CSS
+- Flexbox
+- Fluxo de trabalho mobile-first
+- Media Query
 
-## Construindo seu projeto
+### O que eu aprendi
 
-Sinta-se à vontade para usar qualquer fluxo de trabalho com o qual se sinta confortável. Abaixo está um processo sugerido, mas você não precisa seguir estas etapas:
+Utilizei o media query para deixar responsivo e flexbox nos posicionamentos. tive dificuldade para centralizar na vertical a div principal (container) na tela, não estava conseguindo aumentar a altura do "body" para o "justify content" fazer efeito. E também tive dificuldade na troca da imagem quando muda de mobile para desktop, usei o visibility pra ocultar uma delas (seria uma boa prática?)
 
-1. Inicialize seu projeto como um repositório público no [GitHub](https://github.com/). A criação de um repositório facilitará o compartilhamento de seu código com a comunidade se você precisar de ajuda. Se você não tiver certeza de como fazer isso, [leia este recurso do Try Git](https://try.github.io/).
-2. Configure seu repositório para publicar seu código em um endereço da web. Isso também será útil se você precisar de ajuda durante um desafio, pois pode compartilhar a URL do seu projeto com a URL do repositório. Existem várias maneiras de fazer isso e fornecemos algumas recomendações abaixo.
-3. Examine os projetos para começar a planejar como você vai lidar com o projeto. Esta etapa é crucial para ajudá-lo a pensar no futuro para que as classes CSS criem estilos reutilizáveis.
-4. Antes de adicionar qualquer estilo, estruture seu conteúdo com HTML. Escrever seu HTML primeiro pode ajudar a focar sua atenção na criação de conteúdo bem estruturado.
-5. Escreva os estilos básicos para seu projeto, incluindo estilos de conteúdo gerais, como `font-family` e `font-size`.
-6. Comece a adicionar estilos ao topo da página e trabalhe para baixo. Apenas passe para a próxima seção quando estiver satisfeito por ter concluído a área em que está trabalhando.
+``` css
+@media (min-width: 600px) {
+    .container-texto {
+        width: 50%;
+    }
+    .container {
+        display: flex;
+        height: 400px;
+        width: 500px;
+    }
+    .produto-imagem {
+        visibility: hidden;
+    }
+    .container-imagem {
+        background: url(images/image-product-desktop.jpg);
+        background-size: cover;
+        background-position: center;
+        box-sizing: border-box;
+        border-radius: 10px 0px 0 10px;
+    }
+}
+```
 
-## Como implantar seu projeto
+### Desenvolvimento contínuo
 
-Como mencionado acima, existem muitas maneiras de hospedar seu projeto gratuitamente. Nossos anfitriões recomendados são:
+Gostaria de aperfecioar, com boas práticas, os posicionamentos de elementos e manipulação de imagens. Estou me aprofundando sobre a utilização de outras tecnologias como o JS nesse tipo de projeto e posteriormente ReactJS.
 
-- [Páginas do GitHub](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+### Recursos úteis
 
-Você pode hospedar seu site usando uma dessas soluções ou qualquer um de nossos outros provedores confiáveis. [Leia mais sobre nossos hosts recomendados e confiáveis](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+- [Recurso de exemplo 1](https://www.freecodecamp.org/portuguese/news/html-ou-body-como-definir-a-largura-e-a-altura-como-o-tamanho-total-da-pagina/) - Isso me ajudou pelo ao resultado de centralizar o elemento no meio da tela.
+- [Example resource 2](https://developer.mozilla.org/pt-BR/docs/Web/CSS/Media_Queries/Using_media_queries) - Este é um artigo incrível que me ajudou a colocar a responsividade através do media query em prática. Eu recomendo para quem ainda está aprendendo este conceito.
 
-## Crie um `README.md` personalizado
+## Autor
 
-É altamente recomendável substituir este `README.md` por um personalizado. Fornecemos um modelo dentro do arquivo [`README-template.md`](./README-template.md) neste código inicial.
+- Site - [Hudney Brito](https://hudney-fsbrito.github.io/Hudney-Brito-Portfolio-/)
+- Mentor de frontend - [@seunomedeusuário](https://www.frontendmentor.io/profile/seunomedeusuário)
 
-O modelo fornece um guia sobre o que adicionar. Um `README` personalizado ajudará você a explicar seu projeto e refletir sobre seus aprendizados. Sinta-se à vontade para editar nosso modelo o quanto quiser.
+## Agradecimentos
 
-Depois de adicionar suas informações ao modelo, exclua este arquivo e renomeie o arquivo `README-template.md` para `README.md`. Isso fará com que ele apareça como o arquivo README do seu repositório.
-
-## Enviando sua solução
-
-Envie sua solução na plataforma para que o resto da comunidade veja. Siga nosso ["Guia completo para enviar soluções"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) para obter dicas sobre como fazer isto.
-
-Lembre-se de que, se estiver procurando feedback sobre sua solução, faça perguntas ao enviá-la. Quanto mais específico e detalhado você for com suas perguntas, maior será a chance de obter feedback valioso da comunidade.
-
-## Compartilhando sua solução
-
-Há vários lugares onde você pode compartilhar sua solução:
-
-1. Compartilhe sua página de solução no canal **#finished-projects** da [comunidade do Slack](https://www.frontendmentor.io/slack).
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) e mencione **@frontendmentor**, incluindo o repo e URLs ao vivo no tweet. Adoraríamos dar uma olhada no que você construiu e ajudar a compartilhá-lo.
-3. Compartilhe sua solução em outros canais sociais como o LinkedIn.
-4. Faça um blog sobre sua experiência na construção de seu projeto. Escrever sobre seu fluxo de trabalho, escolhas técnicas e falar sobre seu código é uma maneira brilhante de reforçar o que você aprendeu. Ótimas plataformas para escrever são [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/) e [CodeNewbie](https://community.codenewbie.org /).
-
-Fornecemos modelos para ajudá-lo a compartilhar sua solução depois de enviá-la na plataforma. Edite-os e inclua perguntas específicas quando estiver procurando feedback.
-
-Quanto mais específico você for com suas perguntas, mais provável será que outro membro da comunidade lhe dê feedback.
-
-## Tem feedback para nós?
-
-Adoramos receber feedback! Estamos sempre procurando melhorar nossos desafios e nossa plataforma. Portanto, se você tiver algo que gostaria de mencionar, envie um e-mail para hi[at]frontendmentor[dot]io.
-
-Este desafio é totalmente gratuito. Por favor, compartilhe-o com qualquer pessoa que achará útil para a prática.
-
-**Divirta-se construindo!** 🚀
+Agradeço aos instrutores dos cursos que estou fazendo para me aprimorar e melhorar minhasn habilidades.
